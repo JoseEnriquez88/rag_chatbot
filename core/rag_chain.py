@@ -1,5 +1,6 @@
 import os
 
+from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
@@ -9,9 +10,12 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains import create_retrieval_chain
 from langchain_core.prompts.chat import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 
+load_dotenv()
+
+
 PDF_PATH = "doc/promtior.pdf"
 DB_DIR = "models/faiss_index"
-TOGETHER_API_KEY = "c2b25d9c46027a8657e5a4b90c8121d2d337edb8cbe38b52d8183164c64be779"
+TOGETHER_API_KEY = os.getenv("TOGETHER_API_KEY")
 
 def ensure_faiss_index():
     if os.path.exists(DB_DIR):
