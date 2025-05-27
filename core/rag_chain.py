@@ -21,9 +21,17 @@ retrieval_chain = create_retrieval_chain(retriever, document_chain)
 
 def ask_question(query: str) -> str:
     original = query.strip()
+    low = original.lower()
 
-    if "promtior" not in original.lower():
-        query = f"{original.strip()} (refiriéndose a Promtior)"
+    saludos_es = {"hola", "buenos días", "buenas tardes", "buenas noches"}
+    saludos_en = {"hi", "hello", "hey"}
+    if low in saludos_es:
+        return "¡Hola! Soy el asistente de Promtior. ¿En qué puedo ayudarte?"
+    if low in saludos_en:
+        return "Hello! I'm the Promtior assistant. How can I help you?"
+
+    if "promtior" not in low:
+        query = f"{original} (refiriéndose a Promtior)"
 
     response = retrieval_chain.invoke({"input": query})["answer"]
     clean = response.strip()
@@ -35,3 +43,4 @@ def ask_question(query: str) -> str:
         if stop.lower() in clean.lower():
             clean = clean.split(stop)[0].strip()
     return clean
+
