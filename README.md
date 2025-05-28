@@ -79,11 +79,16 @@ Cuando un usuario envía una consulta, el sistema:
 
 ## 7. Desafíos encontrados
 
-- **Curva de aprendizaje de Python**: Nunca había usado Python; investigué la arquitectura de carpetas y pedí ayuda a IA para modularizar código.
-- **Problemas de inferencia local**: Ollama y Llama 2 tardaban más de un minuto y requerían GPU.
-- **Elección de LLM**: Llama 3 generaba respuestas genéricas o con preguntas de seguimiento; finalmente adopté Mixtral-8x7B, que respondió de manera más robusta y precisa.
-- **Contexto ambiguo**: Preguntas vagas (“¿qué ofrece?”, “¿cuándo se fundó?”) no resolvían a qué parte del PDF referirse.
-- **Scraping vs. PDF**: El scraping devolvía datos erróneos o genéricos; el PDF garantizó obtener detalles exactos (fecha de fundación, servicios clave).
+Encontré desafío en todo. Nunca había usado Python, pero me enfoqué en ver qué tecnologías ocupar e investigué la arquitectura de carpetas. Me apoyé en la IA para que me ayude a “modularizar” (como hacemos en React) los distintos módulos de Python. Vi videos, revisé la documentación de LangChain y exploré repositorios de chatbots, porque nunca había implementado uno.
+
+Una vez que arranqué con el código, tuve problemas con Ollama y Llama 2: estos respondían, pero tardaban más de un minuto. Al investigar descubrí que requieren GPU, y como no tengo, opté por un modelo remoto más liviano.
+
+La IA me recomendó Llama 3, pero recibía mal el contexto y en vez de dar respuestas concisas me lanzaba más preguntas. Finalmente usé Mixtral-8x7B, que es más robusto y seguro, y las respuestas mejoraron muchísimo.
+
+También, con preguntas vagas como “¿qué ofrece?” o “¿cuándo se fundó?”, el modelo no sabía de quién hablaba y devolvía fragmentos genéricos de cualquier parte del PDF.
+
+Intenté scraping de la web, pero las respuestas no coincidían con mis preguntas y devolvía información genérica o errónea. Por eso elegí el PDF como fuente de conocimiento: además de describir de manera breve los servicios que ofrece, también contiene la fecha exacta de la fundación de la compañía.
+
 
 ## 8. Links de interés y contacto
 
