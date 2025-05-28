@@ -14,9 +14,6 @@ Este proyecto monta un pipeline RAG que usa un PDF como única fuente de conocim
 4. Finalmente limpio y post-proceso la respuesta antes de devolverla al usuario a través de FastAPI.
 
 ## 3. Diagrama de flujo
-
-![Diagrama de flujo del pipeline RAG](doc/diagrama.png)
-
 El flujo es el siguiente:
 
 ```mermaid
