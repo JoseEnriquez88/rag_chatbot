@@ -92,8 +92,7 @@ Intenté scraping de la web, pero las respuestas no coincidían con mis pregunta
 
 ## 8. Links de interés y contacto
 
-- **LinkedIn**: [tu perfil]
-- **GitHub**: [tu repositorio]
-- **Portfolio**: [tu sitio]
+- **LinkedIn**: https://www.linkedin.com/in/joseenriquez80/
+- **Portfolio**: https://enriquez-jose.vercel.app/
 - **Email**: enriquez.jose@gmail.com
 - **Demo del bot**: https://chatbot-front-three.vercel.app/
