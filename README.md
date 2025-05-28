@@ -28,21 +28,7 @@ El flujo es el siguiente:
 6. REcibe la respuesta, la post procesa (quitam prefijos, filtra URLs o saludos sobrantes).
 7. Finalmente FastAPI envía ese texto pulido de vuelta al cliente.
 
-## 4. Funcionamiento del proyecto
-
-Este chatbot basado en RAG responde preguntas sobre la compañía Promtior tomando su información directamente del PDF.  
-Cuando un usuario envía una consulta, el sistema:
-
-1. Divide el PDF en fragmentos mediante LangChain.
-2. Genera embeddings con el modelo `all-miniLM` de Hugging Face.
-3. Almacena y recupera vectores usando FAISS.
-4. Recupera los fragmentos más relevantes y los combina en un prompt.
-5. Envía el prompt a un LLM remoto (“Mixtral-8x7B” vía Together.ai).
-6. Post-procesa la respuesta: filtra prefijos, saludos y referencias, y la devuelve al usuario.
-
-> **Nota**: Elegí usar el PDF en lugar de scraping de la web para asegurarme de extraer datos precisos como la fecha de fundación y detalles concretos de los servicios.
-
-## 5. Tecnologías usadas
+## 4. Tecnologías usadas
 
 - **Lenguaje y servidor**: Python 3 + FastAPI + Uvicorn
 - **Pipeline RAG**: LangChain + FAISS + Embeddings MiniLM
@@ -52,7 +38,7 @@ Cuando un usuario envía una consulta, el sistema:
   - **Frontend** en Vercel
 - **Frontend**: Next.js + Redux Toolkit + Redux Persist + Tailwind CSS
 
-## 6. Estructura de carpetas del proyecto
+## 5. Estructura de carpetas del proyecto
 
 ```text
 /
@@ -76,7 +62,7 @@ Cuando un usuario envía una consulta, el sistema:
 └── README.md
 ```
 
-## 7. Desafíos encontrados
+## 6. Desafíos encontrados
 
 Encontré desafío en todo. Nunca había usado Python, pero me enfoqué en ver qué tecnologías ocupar e investigué la arquitectura de carpetas. Me apoyé en la IA para que me ayude  a “modularizar” (como hacemos en React) los distintos módulos de Python. Vi videos, revisé la documentación de LangChain y exploré repositorios de chatbots, porque nunca había implementado uno.
 
@@ -88,7 +74,7 @@ También, con preguntas vagas como “¿qué ofrece?” o “¿cuándo se fundó
 Intenté scraping de la web, pero las respuestas no coincidían con mis preguntas y devolvió información genérica o errónea, Por eso elegí el PDF como fuente de conocimiento porque además de describir de manera breve los servicios que ofrece, también contiene fecha exacta de la fundación de la compañía.
 
 
-## 8. Links de interés y contacto
+## 7. Links de interés y contacto
 
 - **Demo del bot**: https://chatbot-front-three.vercel.app/
 - **LinkedIn**: https://www.linkedin.com/in/joseenriquez80/
