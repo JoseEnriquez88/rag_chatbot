@@ -23,10 +23,10 @@ El flujo es el siguiente:
 2. FastAPI recibe la petición y llama a ask_question().
 3. Dentro de esa función primero detectamos saludos (“hola”, “hi”…). Si es un saludo, devuelve una respuesta amistosa inmediatamente.
 4. Si no es saludo, arrancamos el pipeline RAG:
-   . PyPDFLoader carga el PDF y LangChain lo divide en fragmentos.
-   . Cada fragmento se convierte en vector con MiniLM embeddings.
-   . Los vectores van al índice FAISS, que recupera los k chunks más relevantes.
-   . Esos chunks se meten en la plantilla de prompt junto al system message.
+   - PyPDFLoader carga el PDF y LangChain lo divide en fragmentos.
+   - Cada fragmento se convierte en vector con MiniLM embeddings.
+   - Los vectores van al índice FAISS, que recupera los k chunks más relevantes.
+   - Esos chunks se meten en la plantilla de prompt junto al system message.
 5. Llama al LLM remoto, Mixtral-8x7B vía Together.ai, con invoke(prompt).
 6. REcibe la respuesta, la post procesa (quitam prefijos, filtra URLs o saludos sobrantes).
 7. Finalmente FastAPI envía ese texto pulido de vuelta al cliente.
