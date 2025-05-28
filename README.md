@@ -54,9 +54,6 @@ El flujo es el siguiente:
 │   └── diagrama.png
 ├── models
 │   └── faiss_index
-├── pages
-│   └── api
-│       └── chat.ts
 ├── main.py
 ├── next.config.js
 └── README.md
