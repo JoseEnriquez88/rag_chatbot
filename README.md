@@ -15,24 +15,7 @@ Este proyecto monta un pipeline RAG que usa un PDF como única fuente de conocim
 ![Diagrama de flujo del pipeline RAG](doc/diagrama.png)
 
 El flujo es el siguiente:
-<!-- 
-```mermaid
-flowchart TB
-    Cliente --> FastAPI
-    FastAPI --> ask_question
-    ask_question --> decision{¿Es saludo?}
-    decision -- Sí --> respuesta_amistosa[Respuesta amistosa]
-    decision -- No --> PyPDFLoader
-    PyPDFLoader --> TextSplitter
-    TextSplitter --> MiniLM_Embeddings
-    MiniLM_Embeddings --> FAISS_Index
-    FAISS_Index --> Retrieval[Retrieval (chunks)]
-    Retrieval --> Prompt_Template
-    Prompt_Template --> Invoke_Mixtral[Invoke – Mixtral-8x7B]
-    Invoke_Mixtral --> Post_Procesamiento
-    Post_Procesamiento --> FastAPI_Devuelve[FastAPI devuelve respuesta]
-    FastAPI_Devuelve --> Cliente
-``` -->
+
 
 
 ## 4. Funcionamiento del proyecto
