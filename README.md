@@ -47,7 +47,7 @@ Cuando un usuario envía una consulta, el sistema:
 
 > **Nota**: Elegí usar el PDF en lugar de scraping de la web para asegurarme de extraer datos precisos como la fecha de fundación y detalles concretos de los servicios.
 
-## 4. Tecnologías usadas
+## 5. Tecnologías usadas
 
 - **Lenguaje y servidor**: Python 3 + FastAPI + Uvicorn  
 - **Pipeline RAG**: LangChain + FAISS + Embeddings MiniLM  
@@ -57,7 +57,7 @@ Cuando un usuario envía una consulta, el sistema:
   - **Frontend** en Vercel  
 - **Frontend**: Next.js + Redux Toolkit + Redux Persist + Tailwind CSS  
 
-## 5. Estructura de carpetas del proyecto
+## 6. Estructura de carpetas del proyecto
 /
 ├─ api/
 │  └─ routes/
@@ -79,7 +79,7 @@ Cuando un usuario envía una consulta, el sistema:
 └─ README.md
 
 
-## 6. Desafíos encontrados
+## 7. Desafíos encontrados
 
 - **Curva de aprendizaje de Python**: Nunca había usado Python; investigué la arquitectura de carpetas y pedí ayuda a IA para modularizar código.  
 - **Problemas de inferencia local**: Ollama y Llama 2 tardaban más de un minuto y requerían GPU.  
@@ -87,7 +87,7 @@ Cuando un usuario envía una consulta, el sistema:
 - **Contexto ambiguo**: Preguntas vagas (“¿qué ofrece?”, “¿cuándo se fundó?”) no resolvían a qué parte del PDF referirse.  
 - **Scraping vs. PDF**: El scraping devolvía datos erróneos o genéricos; el PDF garantizó obtener detalles exactos (fecha de fundación, servicios clave).
 
-## 7. Links de interés y contacto
+## 8. Links de interés y contacto
 
 - **LinkedIn**: [tu perfil]  
 - **GitHub**: [tu repositorio]  
