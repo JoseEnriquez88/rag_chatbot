@@ -73,7 +73,7 @@ Intenté scraping de la web, pero las respuestas no coincidían con mis pregunta
 
 ## 7. Links de interés y contacto
 
-- **Demo del bot**: https://chatbot-front-three.vercel.app/
+- **Demo del bot**: https://chatbot-front-sigma.vercel.app/
 - **LinkedIn**: https://www.linkedin.com/in/joseenriquez80/
 - **Portfolio**: https://enriquez-jose.vercel.app/
 - **Email**: enriquez.jose@gmail.com
